@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sincere Apology — A Small Journey</title>
+  <style>
+    :root{
+      --bg:#0f1226; --card:#ffffff; --accent:#ff6b81; --muted:#cbd5e1; --glass:rgba(255,255,255,0.06);
+      --maxw:900px;
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; padding:20px; background:linear-gradient(180deg,#07102a 0%, #0f1226 60%); display:flex; align-items:center; justify-content:center; font-size:16px; color:var(--card);
+    }
+    .wrap{width:100%; max-width:var(--maxw); background:linear-gradient(180deg, rgba(255,255,255,0.03), transparent); border-radius:14px; padding:24px; box-shadow:0 10px 30px rgba(2,6,23,0.6);}
+    header{display:flex; gap:16px; align-items:center}
+    .logo{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent), #ffd6e0); display:flex;align-items:center;justify-content:center;font-weight:700;color:#2b0711}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:6px 0 0; color:var(--muted)}
+
+    .main{display:grid; grid-template-columns: 1fr 360px; gap:20px; margin-top:18px}
+    @media (max-width:900px){.main{grid-template-columns:1fr} .side{order:-1}}
+
+    .page{min-height:360px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:20px; border-radius:12px}
+    nav.pages{display:flex; gap:6px; margin-bottom:12px}
+    .dot{padding:8px 12px;border-radius:999px;background:transparent;border:1px solid rgba(255,255,255,0.06); cursor:pointer}
+    .dot.active{background:linear-gradient(90deg,var(--accent), #ff9bb2); color:#2b0711; border:none}
+
+    .section{display:none; opacity:0; transform:translateY(12px); transition:all .45s cubic-bezier(.2,.9,.2,1)}
+    .section.active{display:block; opacity:1; transform:none}
+
+    .typewriter{font-size:20px; line-height:1.4}
+    .small{font-size:14px;color:var(--muted)}
+
+    .heart{width:120px;height:120px;margin:0 auto; display:flex;align-items:center;justify-content:center}
+    .heart svg{filter:drop-shadow(0 6px 18px rgba(255,107,129,0.2));}
+
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .step{background:var(--glass); padding:12px;border-radius:10px}
+
+    .choices{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+    button.choice{padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.06); background:transparent; cursor:pointer}
+
+    .card-preview{padding:14px;border-radius:12px;background:linear-gradient(180deg,#fff 0%, #ffeef1 100%); color:#2b0711}
+    .btns{display:flex;gap:8px; margin-top:12px}
+    .btn{padding:10px 12px;border-radius:10px;border:none; cursor:pointer}
+    .btn.primary{background:var(--accent); color:#2b0711}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06); color:var(--card)}
+
+    .side{display:flex;flex-direction:column;gap:12px}
+    .mini{padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
+
+    footer{margin-top:12px;text-align:center;color:var(--muted); font-size:13px}
+
+    .pulse{animation:pulse 2s ease-in-out infinite}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.02)}100%{transform:scale(1)}}
+
+    @media print{body{background:white;color:black} .wrap{box-shadow:none} .side, nav.pages{display:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap" role="application">
+    <header>
+      <div class="logo">♥</div>
+      <div>
+        <h1>A little journey — To say I'm sorry</h1>
+        <p class="lead small">Click through the pages. 'SORRY'</p>
+      </div>
+    </header>
+
+    <div class="main">
+      <div>
+        <nav class="pages" aria-label="apology steps">
+          <button class="dot active" data-page="1">Start</button>
+          <button class="dot" data-page="2">Why</button>
+          <button class="dot" data-page="3">Moments</button>
+          <button class="dot" data-page="4">Quiz</button>
+          <button class="dot" data-page="5">Promise</button>
+        </nav>
+
+        <div class="page">
+          <section id="p1" class="section active">
+            <div class="heart" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="120" height="120" aria-hidden="true">
+                <path d="M12 21s-7.2-4.8-9.3-7.1C.9 11.8 2 .9 7 4.7 9 6 12 9 12 9s3-3 5-4.3c5-3.8 6.1 7.1 4.3 9.2C19.2 16.2 12 21 12 21z" fill="url(#g)"/>
+                <defs>
+                  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#ff9bb2" />
+                    <stop offset="100%" stop-color="#ff6b81" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="typewriter" id="typewriter">Hey <span id="herNamePlaceholder">Krishna Acharya</span> —</div>
+            <p class="small">I didn't want this to be a normal "sorry". I want to show you, slowly and clearly, what I mean. Click "Why" to continue.</p>
+          </section>
+
+          <section id="p2" class="section">
+            <h3>Why I'm sorry</h3>
+            <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap">
+              <button class="btn ghost" id="reveal1">Reveal 1</button>
+              <button class="btn ghost" id="reveal2">Reveal 2</button>
+              <button class="btn ghost" id="reveal3">Reveal 3</button>
+            </div>
+            <div id="reasons" style="margin-top:12px"></div>
+          </section>
+
+          <section id="p3" class="section">
+            <h3>Moments that matter</h3>
+            <div class="timeline" id="timeline">
+              <div class="step">Our small talks and the time we have spent togeather.</div>
+              <div class="step">Our small fights — I know fight means bad but not always, We have outfighted the fights havent we? From fights to friends and friends to fight we have gone through that.</div>
+              <div class="step"> I realised saying sorry matters even more than just shutting down the communication IamtruelySORRY.</div>
+            </div>
+          </section>
+
+         <section id="p4" class="section">
+            <h3>Mini Quiz</h3>
+ <form id="quizForm" action="https://formspree.io/f/yourFormID" method="POST" target="_blank">
+               <div class="quiz-question">
+                <p>1. What anime do you like most from below?</p>
+                <label><input type="radio" name="Anime" value="AoT"> Attack on titan</label>
+                <label><input type="radio" name="Anime" value="Demon Slayer"> Demon Slayer</label>
+                <label><input type="radio" name="Anime" value="HxH"> HunterxHunter</label>
+              </div>
+
+              <div class="quiz-question">
+                <p>2. What do you enjoy most?</p>
+                <label><input type="radio" name="enjoy" value="manga"> Reading manga</label>
+                <label><input type="radio" name="enjoy" value="Eating"> Eating</label>
+                <label><input type="radio" name="enjoy" value="Studying"> Studying</label>
+              </div>
+
+              <div class="quiz-question">
+                <p>3. Are you planning to forgive me?</p>
+                <label><input type="radio" name="plans" value="Happy yes"> Yes</label>
+                <label><input type="radio" name="plans" value="Alright yes"> ummmm......yes</label>
+                <label><input type="radio" name="plans" value="nooooooooooooooo"> no</label>
+              </div>
+
+              <button type="button" class="btn primary" onclick="submitQuiz()">Submit Quiz</button>
+            </form>
+            <div id="quizResult" class="quiz-result"></div>
+          </section>
+
+          <section id="p5" class="section">
+            <h3>A promise, </h3>
+            <div class="card-preview" id="promiseCard">
+              <strong>To <span id="cardName">Chrissnaaa</span>,</strong>
+              <p style="margin:8px 0">I promise to listen more, to admit when I'm wrong, and to keep trying. I promise small gestures and honest words. I promise to try to keep us calm and react well even the time is hard and tense.</p>
+              <p style="margin:8px 0; font-style:italic">— <span id="yourNamePlaceholder">Sarun Chaapagin</span></p>
+            </div>
+            <div class="btns">
+              <button class="btn primary" id="printBtn">Print / Save</button>
+              <button class="btn ghost" id="confettiBtn">Celebrate ✨</button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <aside class="side">
+        <div class="mini"><strong>REASON:</strong><p class="small">I miss you <code>Chrissnaa</code>and I am sorry <code>from:Sarun </code> </p></div>
+      </aside>
+    </div>
+
+    <footer>Made with care — Sarun Chapagain</footer>
+  </div>
+
+  <canvas id="confettiCanvas" style="position:fixed; inset:0; pointer-events:none; z-index:9999; display:none"></canvas>
+
+  <script>
+    // navigation
+    const dots = document.querySelectorAll('.dot');
+    const sections = document.querySelectorAll('.section');
+    dots.forEach(d=>d.addEventListener('click', ()=>{
+      dots.forEach(x=>x.classList.remove('active'));
+      d.classList.add('active');
+      const p = d.dataset.page;
+      sections.forEach(s=>s.classList.toggle('active', s.id === 'p'+p));
+    }));
+
+    // typewriter (simplified)
+    const tw = document.getElementById('typewriter');
+    const herName = document.getElementById('herNamePlaceholder').textContent;
+    tw.textContent = `Hey ${herName} — I know I hurt you, and I want to be better.`;
+
+    // reveal reasons
+    const reasons = document.getElementById('reasons');
+    document.getElementById('reveal1').addEventListener('click', ()=>{reasons.innerHTML += '<div class="step">I am sorry, I freak out and react unreasonably, instead i should have reacted quickly with sorry ans a soft and aplogetic tone.</div>';});
+    document.getElementById('reveal2').addEventListener('click', ()=>{reasons.innerHTML += '<div class="step">I reacted instead of listening and furthermore badmouthed and showed attitude and i am sorry for the MLBB thing i shouldnot have.</div>';});
+    document.getElementById('reveal3').addEventListener('click', ()=>{reasons.innerHTML += '<div class="step">I know sorry is only words; I will try to show it with actions from now on.</div>';});
+
+    // quiz answers + send to Formspree
+    let quizAnswers = [];
+    document.querySelectorAll('.choice').forEach(btn=>btn.addEventListener('click', ()=>{
+      quizAnswers.push({question: btn.dataset.question, answer: btn.dataset.answer});
+      document.getElementById('quizResult').innerHTML = '<div class="step">Thanks for answering ❤️</div>';
+
+      fetch("https://formspree.io/f/xovngddp", {
+        method: "POST",
+        body: JSON.stringify({answers: quizAnswers}),
+        headers: {"Content-Type": "answers"}
+      });
+    }));
+        function submitQuiz(){
+      const form=document.getElementById('quizForm');
+      const data=new FormData(form);
+      let output="Your answers:<br>";
+      for(let [key,val] of data.entries()){
+        output+=`${key}: <strong>${val}</strong><br>`;
+      }
+      document.getElementById('quizResult').innerHTML=output+"<br>Thank you for playing 💕";
+    }
+
+    // print
+    document.getElementById('printBtn').addEventListener('click', ()=>{window.print();});
+
+    // confetti
+    const confettiCanvas = document.getElementById('confettiCanvas');
+    const ctx = confettiCanvas.getContext('2d');
+    let confetti = [];
+    function resize(){ confettiCanvas.width = innerWidth; confettiCanvas.height = innerHeight; }
+    resize(); addEventListener('resize', resize);
+    function spawnConfetti(){
+      confetti = [];
+      for(let i=0;i<120;i++) confetti.push({x:Math.random()*innerWidth,y:Math.random()*-innerHeight,r:Math.random()*6+4,d:Math.random()*2+1,c:['#ff9bb2','#ff6b81','#ffd6e0'][Math.floor(Math.random()*3)]});
+      confettiCanvas.style.display='block';
+      runConfetti();
+      setTimeout(()=>{confetti=[];confettiCanvas.style.display='none';ctx.clearRect(0,0,innerWidth,innerHeight);},4500);
+    }
+    function runConfetti(){
+      ctx.clearRect(0,0,innerWidth,innerHeight);
+      for(let i=0;i<confetti.length;i++){const p=confetti[i];p.y+=p.d;p.x+=Math.sin(p.y*0.02)*2;ctx.fillStyle=p.c;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();}
+      if(confetti.length)requestAnimationFrame(runConfetti);
+    }
+    document.getElementById('confettiBtn').addEventListener('click', spawnConfetti);
+  </script>
+</body>
+</html>
